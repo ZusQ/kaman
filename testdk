@@ -1,0 +1,19 @@
+getgenv().DoughKing = function()
+    local url = 'https://bossv1.vercel.app/doughtv2'
+    local response = game:GetService('HttpService'):JSONDecode(game:HttpGet(url))
+    
+    if response and response.Boss == "Dought King V2" and response["Jod ID"] then
+        local jobId = response["Jod ID"]
+        game:GetService("TeleportService"):TeleportToPlaceInstance(7449423635, jobId, game.Players.LocalPlayer)
+    else
+        warn("Không tìm thấy server có boss!")
+    end
+end
+
+spawn(function()
+    while task.wait() do
+        pcall(function()
+            DoughKing()
+        end)
+    end
+end)
