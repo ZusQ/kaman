@@ -13,7 +13,7 @@ end
 spawn(function()
     while task.wait() do
         pcall(function()
-            DoughKing()
+            Darkbeard()
         end)
     end
 end)
