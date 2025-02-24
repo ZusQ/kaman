@@ -1,4 +1,4 @@
-getgenv().DoughKing = function()
+getgenv().Rip Indra = function()
     local url = 'https://bossv1.vercel.app/rip_indra'
     local response = game:GetService('HttpService'):JSONDecode(game:HttpGet(url))
     
@@ -13,7 +13,7 @@ end
 spawn(function()
     while task.wait() do
         pcall(function()
-            DoughKing()
+            Rip Indra()
         end)
     end
 end)
