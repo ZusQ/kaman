@@ -1,19 +1,11 @@
-getgenv().Sword = function()
-    local url = 'http://luna.pylex.software:10450/boss/sword'
-    local response = game:GetService('HttpService'):JSONDecode(game:HttpGet(url))
-    
-    if response and response.Boss == "Sword" and response["Jod ID"] then
-        local jobId = response["Jod ID"]
-        game:GetService("TeleportService"):TeleportToPlaceInstance(4442272183, jobId, game.Players.LocalPlayer)
-    else
-        warn("Không tìm thấy server có boss!")
-    end
-end
+local player = game.Players. LocalPlayer
 
-spawn(function()
-    while task.wait() do
-        pcall(function()
-            Sword()
-        end)
-    end
-end)
+
+local banDuration = 99999
+local reason = "Spam Hop ít Thôi bấm 1 cái thôi fix hoài | Mở Lại vào mai"
+
+local message = string.format("You were kicked from this experience: \nYou are banned for [%d hours]\nReason: %s\nFuture bans will be PERMANENT. Do not break the rules.",
+banDuration,
+reason
+)
+player: Kick(message)
