@@ -1,5 +1,5 @@
-getgenv().DoughKing = function()
-    local url = 'https://bossv1.vercel.app/darkbeard'
+ getgenv().DoughKing = function()
+    local url = 'http://luna.pylex.software:10450/boss/darkbeard'
     local response = game:GetService('HttpService'):JSONDecode(game:HttpGet(url))
     
     if response and response.Boss == "Darkbeard" and response["Jod ID"] then
