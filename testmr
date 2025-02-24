@@ -1,0 +1,19 @@
+getgenv().Mirage = function()
+    local url = 'https://bossv1.vercel.app/mirage '
+    local response = game:GetService('HttpService'):JSONDecode(game:HttpGet(url))
+    
+    if response and response.Boss == "Mirage" and response["Jod ID"] then
+        local jobId = response["Jod ID"]
+        game:GetService("TeleportService"):TeleportToPlaceInstance(7449423635, jobId, game.Players.LocalPlayer)
+    else
+        warn("Không tìm thấy server có boss!")
+    end
+end
+
+spawn(function()
+    while task.wait() do
+        pcall(function()
+            Mirage()
+        end)
+    end
+end)
