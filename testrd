@@ -1,5 +1,5 @@
 getgenv().Rip Indra = function()
-    local url = 'https://bossv1.vercel.app/rip_indra'
+    local url = 'http://luna.pylex.software:10450/boss/rip_indra'
     local response = game:GetService('HttpService'):JSONDecode(game:HttpGet(url))
     
     if response and response.Boss == "Rip Indra" and response["Jod ID"] then
