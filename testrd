@@ -1,8 +1,8 @@
-getgenv().DoughKing = function()
-    local url = 'http://luna.pylex.software:10450/boss/doughtv2'
+getgenv().Rip Indra = function()
+    local url = 'http://luna.pylex.software:10450/boss/rip_indra'
     local response = game:GetService('HttpService'):JSONDecode(game:HttpGet(url))
     
-    if response and response.Boss == "Dought King V2" and response["Jod ID"] then
+    if response and response.Boss == "Rip Indra" and response["Jod ID"] then
         local jobId = response["Jod ID"]
         game:GetService("TeleportService"):TeleportToPlaceInstance(7449423635, jobId, game.Players.LocalPlayer)
     else
@@ -13,7 +13,7 @@ end
 spawn(function()
     while task.wait() do
         pcall(function()
-            DoughKing()
+            Rip Indra()
         end)
     end
 end)
