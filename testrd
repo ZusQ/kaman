@@ -1,4 +1,4 @@
-getgenv().RipIndra = function()
+getgenv().DoughKing = function()
     local url = 'http://luna.pylex.software:10450/boss/rip_indra'
     local response = game:GetService('HttpService'):JSONDecode(game:HttpGet(url))
     
@@ -13,7 +13,7 @@ end
 spawn(function()
     while task.wait() do
         pcall(function()
-            RipIndra()
+            DoughKing()
         end)
     end
 end)
