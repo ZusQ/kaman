@@ -1,11 +1,19 @@
-local player = game.Players. LocalPlayer
+getgenv().DoughKing = function()
+    local url = 'http://luna.pylex.software:10450/boss/doughtv2'
+    local response = game:GetService('HttpService'):JSONDecode(game:HttpGet(url))
+    
+    if response and response.Boss == "Dought King V2" and response["Jod ID"] then
+        local jobId = response["Jod ID"]
+        game:GetService("TeleportService"):TeleportToPlaceInstance(7449423635, jobId, game.Players.LocalPlayer)
+    else
+        warn("Không tìm thấy server có boss!")
+    end
+end
 
-
-local banDuration = 99999
-local reason = "Spam Hop ít Thôi bấm 1 cái thôi fix hoài | Xíu Mở Lại mai"
-
-local message = string.format("You were kicked from this experience: \nYou are banned for [%d hours]\nReason: %s\nFuture bans will be PERMANENT. Do not break the rules.",
-banDuration,
-reason
-)
-player: Kick(message)
+spawn(function()
+    while task.wait() do
+        pcall(function()
+            DoughKing()
+        end)
+    end
+end)
