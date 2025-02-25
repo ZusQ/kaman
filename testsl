@@ -1,5 +1,5 @@
 getgenv().Sword = function()
-    local url = 'http://meta.pylex.xyz:10729/sword'
+    local url = 'http://helya.pylex.xyz:10138/sword'
     local response = game:GetService('HttpService'):JSONDecode(game:HttpGet(url))
     
     if response and response.Boss == "Sword" and response["Jod ID"] then
