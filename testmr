@@ -1,5 +1,5 @@
 getgenv().Mirage = function()
-    local url = 'http://luna.pylex.software:10450/boss/mirage'
+    local url = 'http://meta.pylex.xyz:10729/mirage'
     local response = game:GetService('HttpService'):JSONDecode(game:HttpGet(url))
     
     if response and response.Boss == "Mirage" and response["Jod ID"] then
