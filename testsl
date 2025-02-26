@@ -1,3 +1,4 @@
+wait(3.0)
 getgenv().Sword = function()
     local url = 'http://helya.pylex.xyz:10138/sword'
     local response = game:GetService('HttpService'):JSONDecode(game:HttpGet(url))
