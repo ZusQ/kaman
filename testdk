@@ -1,4 +1,4 @@
-wait(2.0)
+wait(1.0)
 getgenv().DoughKing = function()
     local url = 'http://meta.pylex.xyz:10729/doughtv2'
     local response = game:GetService('HttpService'):JSONDecode(game:HttpGet(url))
