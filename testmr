@@ -1,3 +1,4 @@
+wait(4.0)
 getgenv().Mirage = function()
     local url = 'http://helya.pylex.xyz:10138/mirage'
     local response = game:GetService('HttpService'):JSONDecode(game:HttpGet(url))
