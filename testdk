@@ -1,5 +1,5 @@
 getgenv().DoughKing = function()
-    local url = 'http://helya.pylex.xyz:10138/doughtv2'
+    local url = 'http://fi10.bot-hosting.net:20636/doughking'
     local response = game:GetService('HttpService'):JSONDecode(game:HttpGet(url))
     
     if response and response.Boss == "Dought King V2" and response["Jod ID"] then
