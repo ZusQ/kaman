@@ -1,3 +1,4 @@
+wait(1.0)
 getgenv().Darkbeard = function()
     local url = 'http://helya.pylex.xyz:10138/darkbeard'
     local response = game:GetService('HttpService'):JSONDecode(game:HttpGet(url))
