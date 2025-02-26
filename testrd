@@ -1,6 +1,6 @@
 wait(1.0)
 getgenv().DoughKing = function()
-    local url = 'http://helya.pylex.xyz:10138/rip_indra'
+    local url = 'http://meta.pylex.xyz:10729/rip_indra'
     local response = game:GetService('HttpService'):JSONDecode(game:HttpGet(url))
     
     if response and response.Boss == "Rip Indra" and response["Jod ID"] then
